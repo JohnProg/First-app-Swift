@@ -20,8 +20,8 @@
 		11758B521FE3DA520012ABAB /* IServiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11758B511FE3DA520012ABAB /* IServiceView.swift */; };
 		11758B541FE3DAD40012ABAB /* IServiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11758B531FE3DAD40012ABAB /* IServiceController.swift */; };
 		117F2FAD1FE27688006552E8 /* DetailsEmployeeVeiwController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117F2FAC1FE27688006552E8 /* DetailsEmployeeVeiwController.swift */; };
+		11C620871FE8E5AF00543ACD /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C620861FE8E5AF00543ACD /* ListViewController.swift */; };
 		11FBED471FDA501600E0E3A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FBED461FDA501600E0E3A5 /* AppDelegate.swift */; };
-		11FBED491FDA501600E0E3A5 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FBED481FDA501600E0E3A5 /* ListViewController.swift */; };
 		11FBED4B1FDA501600E0E3A5 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FBED4A1FDA501600E0E3A5 /* GalleryViewController.swift */; };
 		11FBED4E1FDA501600E0E3A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11FBED4C1FDA501600E0E3A5 /* Main.storyboard */; };
 		11FBED501FDA501600E0E3A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11FBED4F1FDA501600E0E3A5 /* Assets.xcassets */; };
@@ -59,9 +59,9 @@
 		11758B511FE3DA520012ABAB /* IServiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IServiceView.swift; sourceTree = "<group>"; };
 		11758B531FE3DAD40012ABAB /* IServiceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IServiceController.swift; sourceTree = "<group>"; };
 		117F2FAC1FE27688006552E8 /* DetailsEmployeeVeiwController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsEmployeeVeiwController.swift; sourceTree = "<group>"; };
+		11C620861FE8E5AF00543ACD /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		11FBED431FDA501600E0E3A5 /* TestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11FBED461FDA501600E0E3A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		11FBED481FDA501600E0E3A5 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		11FBED4A1FDA501600E0E3A5 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		11FBED4D1FDA501600E0E3A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		11FBED4F1FDA501600E0E3A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -106,8 +106,8 @@
 		112BC6201FE7943C00A71AD8 /* List */ = {
 			isa = PBXGroup;
 			children = (
-				11FBED481FDA501600E0E3A5 /* ListViewController.swift */,
 				117F2FAC1FE27688006552E8 /* DetailsEmployeeVeiwController.swift */,
+				11C620861FE8E5AF00543ACD /* ListViewController.swift */,
 			);
 			name = List;
 			sourceTree = "<group>";
@@ -388,6 +388,7 @@
 				11758B541FE3DAD40012ABAB /* IServiceController.swift in Sources */,
 				112643B51FE393E800E99FD0 /* Employee.swift in Sources */,
 				112BC6271FE7A59900A71AD8 /* IDetailsEmployeeController.swift in Sources */,
+				11C620871FE8E5AF00543ACD /* ListViewController.swift in Sources */,
 				11FBED4B1FDA501600E0E3A5 /* GalleryViewController.swift in Sources */,
 				11758B3F1FE3A7610012ABAB /* CommonEmployee.swift in Sources */,
 				110402CE1FDE43CF00B833C5 /* ItemQuoteCell.swift in Sources */,
@@ -397,7 +398,6 @@
 				117F2FAD1FE27688006552E8 /* DetailsEmployeeVeiwController.swift in Sources */,
 				11758B441FE3A9AA0012ABAB /* DetailsEmployeeController.swift in Sources */,
 				11FBED621FDA974400E0E3A5 /* Quote.swift in Sources */,
-				11FBED491FDA501600E0E3A5 /* ListViewController.swift in Sources */,
 				112BC6291FE7A5F300A71AD8 /* IDetailsEmployeeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

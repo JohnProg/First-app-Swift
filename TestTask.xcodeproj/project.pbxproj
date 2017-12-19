@@ -90,52 +90,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		112BC61B1FE7847300A71AD8 /* Model */ = {
+		1151409C1FE9258100E077B1 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				112BC61D1FE7922000A71AD8 /* QuotesRepository.swift */,
-				112BC6231FE7956B00A71AD8 /* EmployeeRepository.swift */,
+				1151409E1FE925A200E077B1 /* Service */,
+				1151409D1FE9259900E077B1 /* List */,
 			);
-			name = Model;
+			path = Protocol;
 			sourceTree = "<group>";
 		};
-		112BC61F1FE793A800A71AD8 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				112BC6201FE7943C00A71AD8 /* List */,
-				112BC6211FE7944300A71AD8 /* Gallery */,
-				112BC6221FE7944D00A71AD8 /* Service */,
-			);
-			name = ViewController;
-			sourceTree = "<group>";
-		};
-		112BC6201FE7943C00A71AD8 /* List */ = {
-			isa = PBXGroup;
-			children = (
-				117F2FAC1FE27688006552E8 /* DetailsEmployeeVeiwController.swift */,
-				11C620861FE8E5AF00543ACD /* ListViewController.swift */,
-			);
-			name = List;
-			sourceTree = "<group>";
-		};
-		112BC6211FE7944300A71AD8 /* Gallery */ = {
-			isa = PBXGroup;
-			children = (
-				11FBED4A1FDA501600E0E3A5 /* GalleryViewController.swift */,
-			);
-			name = Gallery;
-			sourceTree = "<group>";
-		};
-		112BC6221FE7944D00A71AD8 /* Service */ = {
-			isa = PBXGroup;
-			children = (
-				110402CD1FDE43CF00B833C5 /* ItemQuoteCell.swift */,
-				11FBED5A1FDA5AEB00E0E3A5 /* ServiceViewController.swift */,
-			);
-			name = Service;
-			sourceTree = "<group>";
-		};
-		112BC6251FE7A58C00A71AD8 /* List */ = {
+		1151409D1FE9259900E077B1 /* List */ = {
 			isa = PBXGroup;
 			children = (
 				112BC6261FE7A59900A71AD8 /* IDetailsEmployeeController.swift */,
@@ -143,16 +107,81 @@
 				1123B40D1FE913E300496765 /* IListView.swift */,
 				1123B40F1FE913EE00496765 /* IListController.swift */,
 			);
-			name = List;
+			path = List;
 			sourceTree = "<group>";
 		};
-		11707D8E1FE3DEBE00FB33A4 /* Servcie */ = {
+		1151409E1FE925A200E077B1 /* Service */ = {
 			isa = PBXGroup;
 			children = (
 				11758B511FE3DA520012ABAB /* IServiceView.swift */,
 				11758B531FE3DAD40012ABAB /* IServiceController.swift */,
 			);
-			name = Servcie;
+			path = Service;
+			sourceTree = "<group>";
+		};
+		115140A11FE925E900E077B1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				11758B431FE3A9AA0012ABAB /* DetailsEmployeeController.swift */,
+				11FBED5E1FDA7BF200E0E3A5 /* ServiceController.swift */,
+				1151409A1FE9158E00E077B1 /* ListController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		115140A21FE9260200E077B1 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				112BC61D1FE7922000A71AD8 /* QuotesRepository.swift */,
+				112BC6231FE7956B00A71AD8 /* EmployeeRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		115140A31FE9264300E077B1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				115140A71FE926A000E077B1 /* ViewControllers */,
+				11FBED4C1FDA501600E0E3A5 /* Main.storyboard */,
+				11FBED511FDA501600E0E3A5 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		115140A41FE9266A00E077B1 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				117F2FAC1FE27688006552E8 /* DetailsEmployeeVeiwController.swift */,
+				11C620861FE8E5AF00543ACD /* ListViewController.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		115140A51FE9267000E077B1 /* Gallery */ = {
+			isa = PBXGroup;
+			children = (
+				11FBED4A1FDA501600E0E3A5 /* GalleryViewController.swift */,
+			);
+			path = Gallery;
+			sourceTree = "<group>";
+		};
+		115140A61FE9267700E077B1 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				110402CD1FDE43CF00B833C5 /* ItemQuoteCell.swift */,
+				11FBED5A1FDA5AEB00E0E3A5 /* ServiceViewController.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		115140A71FE926A000E077B1 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				115140A61FE9267700E077B1 /* Service */,
+				115140A51FE9267000E077B1 /* Gallery */,
+				115140A41FE9266A00E077B1 /* List */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		11758B391FE3A6A30012ABAB /* List */ = {
@@ -172,35 +201,6 @@
 				11FBED611FDA974400E0E3A5 /* Quote.swift */,
 			);
 			path = Service;
-			sourceTree = "<group>";
-		};
-		11758B571FE3DCA40012ABAB /* Protocol */ = {
-			isa = PBXGroup;
-			children = (
-				112BC6251FE7A58C00A71AD8 /* List */,
-				11707D8E1FE3DEBE00FB33A4 /* Servcie */,
-			);
-			name = Protocol;
-			sourceTree = "<group>";
-		};
-		11758B591FE3DCD50012ABAB /* View */ = {
-			isa = PBXGroup;
-			children = (
-				112BC61F1FE793A800A71AD8 /* ViewController */,
-				11FBED4C1FDA501600E0E3A5 /* Main.storyboard */,
-				11FBED511FDA501600E0E3A5 /* LaunchScreen.storyboard */,
-			);
-			name = View;
-			sourceTree = "<group>";
-		};
-		11758B5D1FE3DD250012ABAB /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				11758B431FE3A9AA0012ABAB /* DetailsEmployeeController.swift */,
-				11FBED5E1FDA7BF200E0E3A5 /* ServiceController.swift */,
-				1151409A1FE9158E00E077B1 /* ListController.swift */,
-			);
-			name = Controller;
 			sourceTree = "<group>";
 		};
 		11FBED3A1FDA501600E0E3A5 = {
@@ -223,10 +223,10 @@
 		11FBED451FDA501600E0E3A5 /* TestTask */ = {
 			isa = PBXGroup;
 			children = (
-				11758B571FE3DCA40012ABAB /* Protocol */,
-				11758B591FE3DCD50012ABAB /* View */,
-				11758B5D1FE3DD250012ABAB /* Controller */,
-				112BC61B1FE7847300A71AD8 /* Model */,
+				1151409C1FE9258100E077B1 /* Protocol */,
+				115140A31FE9264300E077B1 /* View */,
+				115140A11FE925E900E077B1 /* Controller */,
+				115140A21FE9260200E077B1 /* Repository */,
 				11FBED601FDA970700E0E3A5 /* Data */,
 				11FBED461FDA501600E0E3A5 /* AppDelegate.swift */,
 				11FBED541FDA501600E0E3A5 /* Info.plist */,

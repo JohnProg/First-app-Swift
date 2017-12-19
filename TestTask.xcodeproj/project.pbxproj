@@ -8,11 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		110402CE1FDE43CF00B833C5 /* ItemQuoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110402CD1FDE43CF00B833C5 /* ItemQuoteCell.swift */; };
+		1123B40E1FE913E300496765 /* IListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1123B40D1FE913E300496765 /* IListView.swift */; };
+		1123B4101FE913EE00496765 /* IListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1123B40F1FE913EE00496765 /* IListController.swift */; };
 		112643B51FE393E800E99FD0 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112643B41FE393E800E99FD0 /* Employee.swift */; };
 		112BC61E1FE7922000A71AD8 /* QuotesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112BC61D1FE7922000A71AD8 /* QuotesRepository.swift */; };
 		112BC6241FE7956B00A71AD8 /* EmployeeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112BC6231FE7956B00A71AD8 /* EmployeeRepository.swift */; };
 		112BC6271FE7A59900A71AD8 /* IDetailsEmployeeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112BC6261FE7A59900A71AD8 /* IDetailsEmployeeController.swift */; };
 		112BC6291FE7A5F300A71AD8 /* IDetailsEmployeeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112BC6281FE7A5F300A71AD8 /* IDetailsEmployeeView.swift */; };
+		1151409B1FE9158E00E077B1 /* ListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1151409A1FE9158E00E077B1 /* ListController.swift */; };
 		11758B3C1FE3A6E20012ABAB /* Chief.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11758B3B1FE3A6E20012ABAB /* Chief.swift */; };
 		11758B3F1FE3A7610012ABAB /* CommonEmployee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11758B3E1FE3A7610012ABAB /* CommonEmployee.swift */; };
 		11758B411FE3A80D0012ABAB /* Accountant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11758B401FE3A80D0012ABAB /* Accountant.swift */; };
@@ -47,11 +50,14 @@
 /* Begin PBXFileReference section */
 		048CE70A1C322B76AF125715 /* Pods-TestTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestTask.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestTask/Pods-TestTask.debug.xcconfig"; sourceTree = "<group>"; };
 		110402CD1FDE43CF00B833C5 /* ItemQuoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemQuoteCell.swift; sourceTree = "<group>"; };
+		1123B40D1FE913E300496765 /* IListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IListView.swift; sourceTree = "<group>"; };
+		1123B40F1FE913EE00496765 /* IListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IListController.swift; sourceTree = "<group>"; };
 		112643B41FE393E800E99FD0 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
 		112BC61D1FE7922000A71AD8 /* QuotesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesRepository.swift; sourceTree = "<group>"; };
 		112BC6231FE7956B00A71AD8 /* EmployeeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeRepository.swift; sourceTree = "<group>"; };
 		112BC6261FE7A59900A71AD8 /* IDetailsEmployeeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDetailsEmployeeController.swift; sourceTree = "<group>"; };
 		112BC6281FE7A5F300A71AD8 /* IDetailsEmployeeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDetailsEmployeeView.swift; sourceTree = "<group>"; };
+		1151409A1FE9158E00E077B1 /* ListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListController.swift; sourceTree = "<group>"; };
 		11758B3B1FE3A6E20012ABAB /* Chief.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chief.swift; sourceTree = "<group>"; };
 		11758B3E1FE3A7610012ABAB /* CommonEmployee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonEmployee.swift; sourceTree = "<group>"; };
 		11758B401FE3A80D0012ABAB /* Accountant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accountant.swift; sourceTree = "<group>"; };
@@ -134,6 +140,8 @@
 			children = (
 				112BC6261FE7A59900A71AD8 /* IDetailsEmployeeController.swift */,
 				112BC6281FE7A5F300A71AD8 /* IDetailsEmployeeView.swift */,
+				1123B40D1FE913E300496765 /* IListView.swift */,
+				1123B40F1FE913EE00496765 /* IListController.swift */,
 			);
 			name = List;
 			sourceTree = "<group>";
@@ -190,6 +198,7 @@
 			children = (
 				11758B431FE3A9AA0012ABAB /* DetailsEmployeeController.swift */,
 				11FBED5E1FDA7BF200E0E3A5 /* ServiceController.swift */,
+				1151409A1FE9158E00E077B1 /* ListController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -385,15 +394,18 @@
 				112BC61E1FE7922000A71AD8 /* QuotesRepository.swift in Sources */,
 				112BC6241FE7956B00A71AD8 /* EmployeeRepository.swift in Sources */,
 				11758B3C1FE3A6E20012ABAB /* Chief.swift in Sources */,
+				1123B4101FE913EE00496765 /* IListController.swift in Sources */,
 				11758B541FE3DAD40012ABAB /* IServiceController.swift in Sources */,
 				112643B51FE393E800E99FD0 /* Employee.swift in Sources */,
 				112BC6271FE7A59900A71AD8 /* IDetailsEmployeeController.swift in Sources */,
+				1151409B1FE9158E00E077B1 /* ListController.swift in Sources */,
 				11C620871FE8E5AF00543ACD /* ListViewController.swift in Sources */,
 				11FBED4B1FDA501600E0E3A5 /* GalleryViewController.swift in Sources */,
 				11758B3F1FE3A7610012ABAB /* CommonEmployee.swift in Sources */,
 				110402CE1FDE43CF00B833C5 /* ItemQuoteCell.swift in Sources */,
 				11FBED471FDA501600E0E3A5 /* AppDelegate.swift in Sources */,
 				11758B411FE3A80D0012ABAB /* Accountant.swift in Sources */,
+				1123B40E1FE913E300496765 /* IListView.swift in Sources */,
 				11FBED5B1FDA5AEB00E0E3A5 /* ServiceViewController.swift in Sources */,
 				117F2FAD1FE27688006552E8 /* DetailsEmployeeVeiwController.swift in Sources */,
 				11758B441FE3A9AA0012ABAB /* DetailsEmployeeController.swift in Sources */,

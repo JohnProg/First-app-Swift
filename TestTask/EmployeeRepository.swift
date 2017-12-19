@@ -14,14 +14,11 @@ class EmployeeRepository {
     }
     
     public func getAllEmployees() -> [Employee] {
-        let a3 = CommonEmployee.query().fetch().reversed()
-        print(a3)
+        var employees = CommonEmployee.query().fetch().reversed()
+        employees.append(contentsOf: Chief.query().fetch().reversed())
+        employees.append(contentsOf: Accountant.query().fetch().reversed())
         
-        
-//        let employees = Employee.query().fetch().accessibilityElements
-//        let result = employees as! [Employee]
-        
-        return a3 as! [Employee]
+        return employees as! [Employee]
     }
     
     public func editEmployee(editedEmploye: Employee) -> Void {

@@ -35,19 +35,22 @@ class DetailsEmployeeVeiwController: UIViewController, IDetailsEmployeeView {
         switch typeEmployee.selectedSegmentIndex {
         case 0:
             let chief = Chief()
+            chief.position = "Руководитель"
             chief.fullName = fieldFullName.text
             chief.salary = NSNumber(value: Int(fieldSalary.text!)!)
             chief.buisnesTime = fieldBuisnessHours.text
             model?.saveEmployee(employee: chief)
         case 1:
             let commonEmployee = CommonEmployee()
+            commonEmployee.position = "Сотрудник"
             commonEmployee.fullName = fieldFullName.text
             commonEmployee.salary = NSNumber(value: Int(fieldSalary.text!)!)
             commonEmployee.lunchTime = fieldLunchTime.text
             commonEmployee.numberWorkspace = NSNumber(value: Int(fieldWorkplace.text!)!)
-            model?.saveCommonEmployee(employee: commonEmployee)
+            model?.saveEmployee(employee: commonEmployee)
         case 2:
             let accountant = Accountant()
+            accountant.position = "Бухгалтер"
             accountant.fullName = fieldFullName.text
             accountant.salary = NSNumber(value: Int(fieldSalary.text!)!)
             accountant.lunchTime = fieldLunchTime.text

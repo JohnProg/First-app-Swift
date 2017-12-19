@@ -1,18 +1,24 @@
 import UIKit
 
-class ListViewController: UITableViewController {
-
+class ListViewController: UITableViewController, IListView {
+    
+    private var listController: IListController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
         
+        listController = ListController()
+        listController?.attachView(newView: self)
+        listController?.loadEmployees()
     }
 
+    func showEmployees(loadedEmployees: [Employee]) {
+        for employee in loadedEmployees {
+            print(employee.position! + " : " + employee.fullName!)
+        }
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
-        
         return 0
     }
 

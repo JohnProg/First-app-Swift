@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1101681D1FEA2D2200D7227F /* EmployeeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1101681C1FEA2D2200D7227F /* EmployeeViewCell.swift */; };
 		110402CE1FDE43CF00B833C5 /* ItemQuoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110402CD1FDE43CF00B833C5 /* ItemQuoteCell.swift */; };
 		1123B40E1FE913E300496765 /* IListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1123B40D1FE913E300496765 /* IListView.swift */; };
 		1123B4101FE913EE00496765 /* IListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1123B40F1FE913EE00496765 /* IListController.swift */; };
@@ -49,6 +50,7 @@
 
 /* Begin PBXFileReference section */
 		048CE70A1C322B76AF125715 /* Pods-TestTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestTask.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestTask/Pods-TestTask.debug.xcconfig"; sourceTree = "<group>"; };
+		1101681C1FEA2D2200D7227F /* EmployeeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewCell.swift; sourceTree = "<group>"; };
 		110402CD1FDE43CF00B833C5 /* ItemQuoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemQuoteCell.swift; sourceTree = "<group>"; };
 		1123B40D1FE913E300496765 /* IListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IListView.swift; sourceTree = "<group>"; };
 		1123B40F1FE913EE00496765 /* IListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IListController.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 			children = (
 				117F2FAC1FE27688006552E8 /* DetailsEmployeeVeiwController.swift */,
 				11C620861FE8E5AF00543ACD /* ListViewController.swift */,
+				1101681C1FEA2D2200D7227F /* EmployeeViewCell.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -399,6 +402,7 @@
 				112643B51FE393E800E99FD0 /* Employee.swift in Sources */,
 				112BC6271FE7A59900A71AD8 /* IDetailsEmployeeController.swift in Sources */,
 				1151409B1FE9158E00E077B1 /* ListController.swift in Sources */,
+				1101681D1FEA2D2200D7227F /* EmployeeViewCell.swift in Sources */,
 				11C620871FE8E5AF00543ACD /* ListViewController.swift in Sources */,
 				11FBED4B1FDA501600E0E3A5 /* GalleryViewController.swift in Sources */,
 				11758B3F1FE3A7610012ABAB /* CommonEmployee.swift in Sources */,

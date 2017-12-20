@@ -37,13 +37,44 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="deE-EO-5KH">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="90" id="deE-EO-5KH" customClass="EmployeeViewCell" customModule="TestTask" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="deE-EO-5KH" id="7bJ-j9-bZv">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="20" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Зарплата:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YoE-Bw-JTl">
+                                            <rect key="frame" x="16" y="32" width="343" height="17"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="17" id="mYw-eV-fNq"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="10" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ФИО:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYO-JG-T5R">
+                                            <rect key="frame" x="16" y="11" width="343" height="20"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="eYO-JG-T5R" firstAttribute="trailing" secondItem="7bJ-j9-bZv" secondAttribute="trailingMargin" id="QKG-QA-F97"/>
+                                        <constraint firstItem="YoE-Bw-JTl" firstAttribute="top" secondItem="7bJ-j9-bZv" secondAttribute="topMargin" constant="21" id="Win-3K-IeI"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="YoE-Bw-JTl" secondAttribute="trailing" constant="16" id="h6Q-dS-1sv"/>
+                                        <constraint firstItem="eYO-JG-T5R" firstAttribute="top" secondItem="7bJ-j9-bZv" secondAttribute="topMargin" id="pe6-6Q-vQe"/>
+                                        <constraint firstItem="eYO-JG-T5R" firstAttribute="leading" secondItem="7bJ-j9-bZv" secondAttribute="leadingMargin" id="vo2-cE-CNI"/>
+                                        <constraint firstItem="YoE-Bw-JTl" firstAttribute="width" secondItem="eYO-JG-T5R" secondAttribute="width" id="xpE-PB-aFt"/>
+                                        <constraint firstItem="YoE-Bw-JTl" firstAttribute="leading" secondItem="eYO-JG-T5R" secondAttribute="leading" id="zgi-xn-gQs"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="lblFullName" destination="eYO-JG-T5R" id="Xek-2W-CR0"/>
+                                    <outlet property="lblSalary" destination="YoE-Bw-JTl" id="8bB-BX-dPk"/>
+                                    <segue destination="Ric-sW-U5h" kind="show" id="hQp-bQ-hUS"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -61,10 +92,13 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="JRR-ZS-yeN" id="LPx-Rm-tjC"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gHg-bC-E7H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1265" y="-52"/>
+            <point key="canvasLocation" x="1264.8" y="-52.623688155922046"/>
         </scene>
         <!--Add employee-->
         <scene sceneID="jWH-V1-Tio">
@@ -136,6 +170,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g6x-58-oee">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Edit employee" id="fyw-ga-2z0">
+                                        <barButtonItem key="leftBarButtonItem" title="Edit" id="QfH-46-WbB"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="ntX-iK-Fbt"/>
@@ -348,5 +391,8 @@
         <image name="Save" width="24" height="24"/>
         <image name="Service" width="24" height="24"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="RcX-pt-8cR"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

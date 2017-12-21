@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -84,15 +85,18 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="List" image="List" id="fH9-UI-4C0"/>
                     <navigationItem key="navigationItem" title="List" id="wGG-E9-eCt">
-                        <barButtonItem key="leftBarButtonItem" title="Edit" id="Tlq-Cg-Ghg"/>
-                        <barButtonItem key="rightBarButtonItem" title="Add" image="AddNew" id="Tc5-Yh-Jrp">
-                            <connections>
-                                <segue destination="Ric-sW-U5h" kind="show" id="RcX-pt-8cR"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Add" image="AddNew" id="Tc5-Yh-Jrp">
+                                <connections>
+                                    <segue destination="Ric-sW-U5h" kind="show" id="RcX-pt-8cR"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Sort" image="SortAlphabet" id="R2f-e3-Xdq"/>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="employeeViewTable" destination="JRR-ZS-yeN" id="KRq-ls-9yg"/>
                         <outlet property="tableView" destination="JRR-ZS-yeN" id="LPx-Rm-tjC"/>
                     </connections>
                 </tableViewController>
@@ -184,7 +188,7 @@
                         <viewLayoutGuide key="safeArea" id="ntX-iK-Fbt"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add employee" id="Yol-mf-Rvp">
-                        <barButtonItem key="rightBarButtonItem" largeContentSizeImage="Save" style="plain" systemItem="save" id="7Ob-eN-HjR">
+                        <barButtonItem key="rightBarButtonItem" title="Save" image="Save" largeContentSizeImage="Save" style="plain" id="7Ob-eN-HjR">
                             <connections>
                                 <action selector="saveEmployee:" destination="Ric-sW-U5h" id="mtz-d9-Xvl"/>
                             </connections>
@@ -243,8 +247,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="299.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="lblQuote" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G6q-l4-MVr">
-                                                    <rect key="frame" x="15" y="11" width="345" height="236"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="lblQuote" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G6q-l4-MVr">
+                                                    <rect key="frame" x="15" y="11" width="345" height="212"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -277,6 +281,7 @@
                                                 <constraint firstItem="G6q-l4-MVr" firstAttribute="top" secondItem="rtA-bv-kkJ" secondAttribute="topMargin" id="VpC-Xy-2cZ"/>
                                                 <constraint firstItem="p8L-99-gLd" firstAttribute="top" secondItem="G6q-l4-MVr" secondAttribute="bottom" constant="32" id="lme-qW-fBq"/>
                                                 <constraint firstItem="G6q-l4-MVr" firstAttribute="leading" secondItem="rtA-bv-kkJ" secondAttribute="leadingMargin" id="rAv-AE-ghp"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="p8L-99-gLd" secondAttribute="trailing" constant="15" id="xdc-Ks-scl"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -390,6 +395,7 @@
         <image name="List" width="24" height="24"/>
         <image name="Save" width="24" height="24"/>
         <image name="Service" width="24" height="24"/>
+        <image name="SortAlphabet" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="RcX-pt-8cR"/>

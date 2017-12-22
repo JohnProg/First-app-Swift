@@ -38,15 +38,26 @@ class ListViewController: UITableViewController, IListView {
     //Отображаем список сотрудников
     func showEmployees(loadedEmployees: [Employee]) {
         employees = loadedEmployees
-        sortData()
+        sortEmployeesByType()
         employeeViewTable.reloadData()
     }
     
     //Сортировка сотрудников по типу
-    func sortData() {
+    func sortEmployeesByType() {
         data[.chief] = employees?.filter({$0 .position! == CHIEF})
         data[.common_employee] = employees?.filter({$0 .position! == EMPLOYEE})
         data[.accountant] = employees?.filter({$0 .position! == ACCOUNTANT})
+    }
+    
+    //Открывает экран для редактирования
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "editEmployee" {
+            let detailsView = segue.destination as! DetailsEmployeeVeiwController
+            let indexPath = employeeViewTable.indexPathForSelectedRow
+            
+            let tableSection = TableSections(rawValue: (indexPath?.section)!)
+            detailsView.employee = data[tableSection!]?[(indexPath?.row)!]
+        }
     }
     
     //Количество секций
@@ -112,19 +123,39 @@ class ListViewController: UITableViewController, IListView {
     //Удалить ячейку
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == UITableViewCellEditingStyle.delete {
-            employees?.remove(at: (indexPath as NSIndexPath).row)
-            employeeViewTable.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
+            let tableSection = TableSections(rawValue: (indexPath.section))
+            let employee = data[tableSection!]?[(indexPath.row)]
+            listController?.removeEmployee(employee: employee!)
+            listController?.loadEmployees()
         }
     }
     
-    //Включает Edit mode
+    //Определяет можно ли перемещать ячейку
     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
         return self.isEditing
     }
     
+    override func tableView(_ tableView: UITableView,
+                            targetIndexPathForMoveFromRowAt sourceIndexPath: IndexPath,
+                            toProposedIndexPath proposedDestinationIndexPath: IndexPath) -> IndexPath {
+        if sourceIndexPath.section != proposedDestinationIndexPath.section {
+            return sourceIndexPath
+        }
+        return proposedDestinationIndexPath
+    }
+    
     //Переместить ячейку
     override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        if sourceIndexPath.section != destinationIndexPath.section {
+            return
+        }
+        
         let employee = employees?.remove(at: (sourceIndexPath as NSIndexPath).row)
         employees?.insert(employee!, at: (destinationIndexPath as NSIndexPath).row)
+    }
+    
+    @IBAction func sortByAlphabet(_ sender: Any) {
+        listController?.sortByAlphabet()
+        listController?.loadEmployees()
     }
 }

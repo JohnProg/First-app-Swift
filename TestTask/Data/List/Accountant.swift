@@ -3,6 +3,6 @@ import Foundation
 
 public class Accountant : CommonEmployee {
     
-    public var typeAccountant : String?
+    @objc dynamic public var typeAccountant : String?
     
 }

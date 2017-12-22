@@ -74,7 +74,7 @@
                                 <connections>
                                     <outlet property="lblFullName" destination="eYO-JG-T5R" id="Xek-2W-CR0"/>
                                     <outlet property="lblSalary" destination="YoE-Bw-JTl" id="8bB-BX-dPk"/>
-                                    <segue destination="Ric-sW-U5h" kind="show" id="hQp-bQ-hUS"/>
+                                    <segue destination="Ric-sW-U5h" kind="show" identifier="editEmployee" id="hQp-bQ-hUS"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -91,7 +91,11 @@
                                     <segue destination="Ric-sW-U5h" kind="show" id="RcX-pt-8cR"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem title="Sort" image="SortAlphabet" id="R2f-e3-Xdq"/>
+                            <barButtonItem title="Sort" image="SortAlphabet" id="R2f-e3-Xdq">
+                                <connections>
+                                    <action selector="sortByAlphabet:" destination="wss-7W-37Q" id="jD0-OZ-XRW"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -102,7 +106,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gHg-bC-E7H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1264.8" y="-52.623688155922046"/>
+            <point key="canvasLocation" x="1353" y="-53"/>
         </scene>
         <!--Add employee-->
         <scene sceneID="jWH-V1-Tio">
@@ -208,7 +212,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6DM-Qk-LpV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2140" y="-52"/>
+            <point key="canvasLocation" x="2287" y="-52"/>
         </scene>
         <!--Service-->
         <scene sceneID="LWP-5U-a8z">
@@ -398,7 +402,7 @@
         <image name="SortAlphabet" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="RcX-pt-8cR"/>
+        <segue reference="hQp-bQ-hUS"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

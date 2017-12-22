@@ -19,9 +19,17 @@ class DetailsEmployeeVeiwController: UIViewController, IDetailsEmployeeView {
     
     private var model: IDetailsEmployeeController?
     
+    var employee: Employee?
+    
     override func viewDidLoad() {
         model = DetailsEmployeeController()
         model?.attachView(viewController: self)
+        
+        if employee != nil {
+            self.title = "Edit employee"
+            setFieldsForEditMode(employee: employee!)
+        }
+        
         visibleFields()
         
         super.viewDidLoad()
@@ -55,7 +63,7 @@ class DetailsEmployeeVeiwController: UIViewController, IDetailsEmployeeView {
             accountant.salary = NSNumber(value: Int(fieldSalary.text!)!)
             accountant.lunchTime = fieldLunchTime.text
             accountant.numberWorkspace = NSNumber(value: Int(fieldWorkplace.text!)!)
-            accountant.typeAccountant = typeAccountant.selectedSegmentIndex == 0 ? "Начисление зарплаты" : "Учет метериалов"
+            accountant.typeAccountant = typeAccountant.selectedSegmentIndex == 0 ? "salary" : "materials"
             model?.saveEmployee(employee: accountant)
         default:
             break
@@ -85,5 +93,32 @@ class DetailsEmployeeVeiwController: UIViewController, IDetailsEmployeeView {
         default:
             break
         }
+    }
+    
+    func setFieldsForEditMode(employee: Employee) {
+        fieldFullName.text = employee.fullName
+        fieldSalary.text = employee.salary?.stringValue
+        
+        switch employee.position! {
+        case "Руководитель":
+            typeEmployee.selectedSegmentIndex = 0
+            let chief = employee as! Chief
+            fieldBuisnessHours.text = chief.buisnesTime
+        case "Сотрудник":
+            typeEmployee.selectedSegmentIndex = 1
+            let commonEmployee = employee as! CommonEmployee
+            fieldWorkplace.text = commonEmployee.numberWorkspace?.stringValue
+            fieldLunchTime.text = commonEmployee.lunchTime
+        case "Бухгалтер":
+            typeEmployee.selectedSegmentIndex = 2
+            let accountant = employee as! Accountant
+            fieldWorkplace.text = accountant.numberWorkspace?.stringValue
+            fieldLunchTime.text = accountant.lunchTime
+            typeAccountant.selectedSegmentIndex = accountant.typeAccountant == "salary" ? 0 : 1
+        default:
+            break
+        }
+        
+        visibleFields()
     }
 }

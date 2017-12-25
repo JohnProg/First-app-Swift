@@ -2,11 +2,11 @@ import Foundation
 
 class EmployeeRepository {
     
-    public func saveEmployee(employee: Employee) -> Void {
+    public func saveEmployee(employee: Employee) {
         employee.commit()
     }
     
-    public func removeEmployee(employee: Employee) -> Void {
+    public func removeEmployee(employee: Employee) {
         employee.remove()
     }
     
@@ -24,19 +24,47 @@ class EmployeeRepository {
         return employees as! [Employee]
     }
     
-    public func editEmployee(editedEmploye: Employee) -> Void {
-        Employee.query().where(withFormat: "id == %@", withParameters: [editedEmploye.id]).fetch().removeAll()
+    public func editEmployee(editedEmploye: Employee) {
+        Chief.query()
+            .where(withFormat: "id = %@", withParameters: [editedEmploye.id])
+            .fetch()
+            .removeAll()
+        
+        CommonEmployee.query()
+            .where(withFormat: "id = %@", withParameters: [editedEmploye.id])
+            .fetch()
+            .removeAll()
+        
+        Accountant.query()
+            .where(withFormat: "id = %@", withParameters: [editedEmploye.id])
+            .fetch()
+            .removeAll()
+        
         editedEmploye.commit()
     }
     
-    public func sortByUser(employee: Employee) {
-//        Employee.query()
-//            .where(withFormat: "id == %@", withParameters: [employeeId])
-//            .fetch()
-//            .removeAll()
+    public func sortByUser(employees: [Employee], typeEmployee: String) {
+        switch typeEmployee {
+        case "Руководитель":
+            Chief.query().fetch().removeAll()
+        case "Сотрудник":
+            CommonEmployee.query().fetch().removeAll()
+        case "Бухгалтер":
+            Accountant.query().fetch().removeAll()
+        default:
+            break
+        }
+        
+        //var i = employees.count
+        for employee in employees {
+            //employee.id = NSNumber.init(value: i)
+            employee.commit()
+            //i -= 1
+        }
     }
     
     //Тупо костыли. Руки надо бы отрубить :(
+    //Но костыли оправданы. SharkORM багованая ***
     public func sortByAlphabet() {
         var querySortedEmployees = CommonEmployee.query().order(by: "fullName").fetch().reversed()
         querySortedEmployees.append(contentsOf: Chief.query().order(by: "fullName").fetch().reversed())
@@ -48,7 +76,6 @@ class EmployeeRepository {
         
         let sortedEmployees = querySortedEmployees as! [Employee]
         var i = 0
-        
         for employee in sortedEmployees {
             employee.id = NSNumber.init(value: i)
             employee.commit()

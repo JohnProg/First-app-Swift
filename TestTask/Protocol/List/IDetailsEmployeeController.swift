@@ -1,7 +1,8 @@
 import Foundation
 
 protocol IDetailsEmployeeController {
-    func attachView(viewController: IDetailsEmployeeView) -> Void
-    func viewIsReady() -> Void
-    func saveEmployee(employee: Employee) -> Void
+    func attachView(viewController: IDetailsEmployeeView)
+    func viewIsReady()
+    func saveEmployee(employee: Employee)
+    func editEmployee(employee: Employee)
 }

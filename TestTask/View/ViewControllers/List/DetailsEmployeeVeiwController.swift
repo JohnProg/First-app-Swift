@@ -18,7 +18,7 @@ class DetailsEmployeeVeiwController: UIViewController, IDetailsEmployeeView {
     @IBOutlet weak var btnSave: UIBarButtonItem!
     
     private var model: IDetailsEmployeeController?
-    
+    private var isEditMode = false
     var employee: Employee?
     
     override func viewDidLoad() {
@@ -28,6 +28,7 @@ class DetailsEmployeeVeiwController: UIViewController, IDetailsEmployeeView {
         if employee != nil {
             self.title = "Edit employee"
             setFieldsForEditMode(employee: employee!)
+            isEditMode = true
         }
         
         visibleFields()
@@ -40,6 +41,48 @@ class DetailsEmployeeVeiwController: UIViewController, IDetailsEmployeeView {
     }
     
     @IBAction func saveEmployee(_ sender: Any) {
+        if isEditMode {
+            saveEditedEmployee()
+        } else {
+            saveNewEmployee()
+        }
+    }
+    
+    func saveEditedEmployee() {
+        switch typeEmployee.selectedSegmentIndex {
+        case 0:
+            let chief = Chief()
+            chief.id = employee?.id
+            chief.position = "Руководитель"
+            chief.fullName = fieldFullName.text
+            chief.salary = NSNumber(value: Int(fieldSalary.text!)!)
+            chief.buisnesTime = fieldBuisnessHours.text
+            model?.editEmployee(employee: chief)
+        case 1:
+            let commonEmployee = CommonEmployee()
+            commonEmployee.id = employee?.id
+            commonEmployee.position = "Сотрудник"
+            commonEmployee.fullName = fieldFullName.text
+            commonEmployee.salary = NSNumber(value: Int(fieldSalary.text!)!)
+            commonEmployee.lunchTime = fieldLunchTime.text
+            commonEmployee.numberWorkspace = NSNumber(value: Int(fieldWorkplace.text!)!)
+            model?.editEmployee(employee: commonEmployee)
+        case 2:
+            let accountant = Accountant()
+            accountant.id = employee?.id
+            accountant.position = "Бухгалтер"
+            accountant.fullName = fieldFullName.text
+            accountant.salary = NSNumber(value: Int(fieldSalary.text!)!)
+            accountant.lunchTime = fieldLunchTime.text
+            accountant.numberWorkspace = NSNumber(value: Int(fieldWorkplace.text!)!)
+            accountant.typeAccountant = typeAccountant.selectedSegmentIndex == 0 ? "salary" : "materials"
+            model?.editEmployee(employee: accountant)
+        default:
+            break
+        }
+    }
+    
+    func saveNewEmployee() {
         switch typeEmployee.selectedSegmentIndex {
         case 0:
             let chief = Chief()
@@ -69,6 +112,10 @@ class DetailsEmployeeVeiwController: UIViewController, IDetailsEmployeeView {
             break
         }
     }
+    
+    
+    
+    
     
     func visibleFields() {
         switch typeEmployee.selectedSegmentIndex {
@@ -118,7 +165,5 @@ class DetailsEmployeeVeiwController: UIViewController, IDetailsEmployeeView {
         default:
             break
         }
-        
-        visibleFields()
     }
 }

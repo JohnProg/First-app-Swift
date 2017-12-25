@@ -19,7 +19,7 @@ class ListController: IListController {
         employeeRepository.sortByAlphabet()
     }
     
-    func sortByUser(employee: Employee) {
+    func sortByUser(employee: [Employee]) {
         
     }
     

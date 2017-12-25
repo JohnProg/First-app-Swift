@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1101681D1FEA2D2200D7227F /* EmployeeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1101681C1FEA2D2200D7227F /* EmployeeViewCell.swift */; };
 		110402CE1FDE43CF00B833C5 /* ItemQuoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110402CD1FDE43CF00B833C5 /* ItemQuoteCell.swift */; };
+		11088D111FF0BCCA006FD9CE /* GalleryImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11088D101FF0BCCA006FD9CE /* GalleryImages.swift */; };
 		1123B40E1FE913E300496765 /* IListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1123B40D1FE913E300496765 /* IListView.swift */; };
 		1123B4101FE913EE00496765 /* IListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1123B40F1FE913EE00496765 /* IListController.swift */; };
 		112643B51FE393E800E99FD0 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112643B41FE393E800E99FD0 /* Employee.swift */; };
@@ -16,6 +17,7 @@
 		112BC6241FE7956B00A71AD8 /* EmployeeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112BC6231FE7956B00A71AD8 /* EmployeeRepository.swift */; };
 		112BC6271FE7A59900A71AD8 /* IDetailsEmployeeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112BC6261FE7A59900A71AD8 /* IDetailsEmployeeController.swift */; };
 		112BC6291FE7A5F300A71AD8 /* IDetailsEmployeeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112BC6281FE7A5F300A71AD8 /* IDetailsEmployeeView.swift */; };
+		113286CA1FF0C15C00CB782A /* ImageSlideshow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 113286CB1FF0C15C00CB782A /* ImageSlideshow.framework */; };
 		1151409B1FE9158E00E077B1 /* ListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1151409A1FE9158E00E077B1 /* ListController.swift */; };
 		11758B3C1FE3A6E20012ABAB /* Chief.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11758B3B1FE3A6E20012ABAB /* Chief.swift */; };
 		11758B3F1FE3A7610012ABAB /* CommonEmployee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11758B3E1FE3A7610012ABAB /* CommonEmployee.swift */; };
@@ -33,17 +35,18 @@
 		11FBED5B1FDA5AEB00E0E3A5 /* ServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FBED5A1FDA5AEB00E0E3A5 /* ServiceViewController.swift */; };
 		11FBED5F1FDA7BF200E0E3A5 /* ServiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FBED5E1FDA7BF200E0E3A5 /* ServiceController.swift */; };
 		11FBED621FDA974400E0E3A5 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FBED611FDA974400E0E3A5 /* Quote.swift */; };
+		2B4816A39A1F2C3682550387 /* Pods_TestTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC81A6FB2F54F1D42C6A61EC /* Pods_TestTask.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		11758B2F1FE3962B0012ABAB /* Embed Frameworks */ = {
+		11088D141FF0BFBF006FD9CE /* Embed PlugIns */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
-			dstSubfolderSpec = 10;
+			dstSubfolderSpec = 13;
 			files = (
 			);
-			name = "Embed Frameworks";
+			name = "Embed PlugIns";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -52,6 +55,8 @@
 		048CE70A1C322B76AF125715 /* Pods-TestTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestTask.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestTask/Pods-TestTask.debug.xcconfig"; sourceTree = "<group>"; };
 		1101681C1FEA2D2200D7227F /* EmployeeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewCell.swift; sourceTree = "<group>"; };
 		110402CD1FDE43CF00B833C5 /* ItemQuoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemQuoteCell.swift; sourceTree = "<group>"; };
+		11088D101FF0BCCA006FD9CE /* GalleryImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryImages.swift; sourceTree = "<group>"; };
+		11088D191FF0BFD4006FD9CE /* ImageSlideshow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ImageSlideshow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1123B40D1FE913E300496765 /* IListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IListView.swift; sourceTree = "<group>"; };
 		1123B40F1FE913EE00496765 /* IListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IListController.swift; sourceTree = "<group>"; };
 		112643B41FE393E800E99FD0 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
@@ -59,6 +64,9 @@
 		112BC6231FE7956B00A71AD8 /* EmployeeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeRepository.swift; sourceTree = "<group>"; };
 		112BC6261FE7A59900A71AD8 /* IDetailsEmployeeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDetailsEmployeeController.swift; sourceTree = "<group>"; };
 		112BC6281FE7A5F300A71AD8 /* IDetailsEmployeeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDetailsEmployeeView.swift; sourceTree = "<group>"; };
+		113286C21FF0C09100CB782A /* ImageSlideshow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ImageSlideshow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		113286C91FF0C0FB00CB782A /* ImageSlideshow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ImageSlideshow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		113286CB1FF0C15C00CB782A /* ImageSlideshow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ImageSlideshow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1151409A1FE9158E00E077B1 /* ListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListController.swift; sourceTree = "<group>"; };
 		11758B3B1FE3A6E20012ABAB /* Chief.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chief.swift; sourceTree = "<group>"; };
 		11758B3E1FE3A7610012ABAB /* CommonEmployee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonEmployee.swift; sourceTree = "<group>"; };
@@ -79,6 +87,7 @@
 		11FBED5E1FDA7BF200E0E3A5 /* ServiceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceController.swift; sourceTree = "<group>"; };
 		11FBED611FDA974400E0E3A5 /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		76FC1C3FCDE5606EF8C9012D /* Pods-TestTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestTask.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestTask/Pods-TestTask.release.xcconfig"; sourceTree = "<group>"; };
+		AC81A6FB2F54F1D42C6A61EC /* Pods_TestTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,12 +95,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				113286CA1FF0C15C00CB782A /* ImageSlideshow.framework in Frameworks */,
+				2B4816A39A1F2C3682550387 /* Pods_TestTask.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		113286CC1FF0C4B800CB782A /* Gallery */ = {
+			isa = PBXGroup;
+			children = (
+				11088D101FF0BCCA006FD9CE /* GalleryImages.swift */,
+			);
+			path = Gallery;
+			sourceTree = "<group>";
+		};
 		1151409C1FE9258100E077B1 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,6 +231,7 @@
 				11FBED451FDA501600E0E3A5 /* TestTask */,
 				11FBED441FDA501600E0E3A5 /* Products */,
 				CEB367405EE88FA1CDD9C403 /* Pods */,
+				8607D318F8DC7BCD2AC05D5B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -241,10 +261,23 @@
 		11FBED601FDA970700E0E3A5 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				113286CC1FF0C4B800CB782A /* Gallery */,
 				11758B3A1FE3A6B20012ABAB /* Service */,
 				11758B391FE3A6A30012ABAB /* List */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		8607D318F8DC7BCD2AC05D5B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				113286CB1FF0C15C00CB782A /* ImageSlideshow.framework */,
+				113286C91FF0C0FB00CB782A /* ImageSlideshow.framework */,
+				113286C21FF0C09100CB782A /* ImageSlideshow.framework */,
+				11088D191FF0BFD4006FD9CE /* ImageSlideshow.framework */,
+				AC81A6FB2F54F1D42C6A61EC /* Pods_TestTask.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		CEB367405EE88FA1CDD9C403 /* Pods */ = {
@@ -269,7 +302,7 @@
 				11FBED411FDA501600E0E3A5 /* Resources */,
 				9735300A9A01FC212D88F2A4 /* [CP] Embed Pods Frameworks */,
 				E311D07BC00E29899A76C6B4 /* [CP] Copy Pods Resources */,
-				11758B2F1FE3962B0012ABAB /* Embed Frameworks */,
+				11088D141FF0BFBF006FD9CE /* Embed PlugIns */,
 			);
 			buildRules = (
 			);
@@ -336,6 +369,8 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-TestTask/Pods-TestTask-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/ImageSlideshow/ImageSlideshow.framework",
 				"${BUILT_PRODUCTS_DIR}/SharkORM/SharkORM.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftHTTP/SwiftHTTP.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
@@ -343,6 +378,8 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImageSlideshow.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SharkORM.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftHTTP.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
@@ -408,6 +445,7 @@
 				11758B3F1FE3A7610012ABAB /* CommonEmployee.swift in Sources */,
 				110402CE1FDE43CF00B833C5 /* ItemQuoteCell.swift in Sources */,
 				11FBED471FDA501600E0E3A5 /* AppDelegate.swift in Sources */,
+				11088D111FF0BCCA006FD9CE /* GalleryImages.swift in Sources */,
 				11758B411FE3A80D0012ABAB /* Accountant.swift in Sources */,
 				1123B40E1FE913E300496765 /* IListView.swift in Sources */,
 				11FBED5B1FDA5AEB00E0E3A5 /* ServiceViewController.swift in Sources */,

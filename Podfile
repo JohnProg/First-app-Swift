@@ -8,5 +8,7 @@ target 'TestTask' do
   pod 'SwiftyJSON', '~> 4.0.0'
   pod 'Alamofire', '~> 4.6.0'
   pod 'SharkORM'
+  pod 'ImageSlideshow', '~> 1.4'
+  pod 'ImageSlideshow/Alamofire'
   
 end

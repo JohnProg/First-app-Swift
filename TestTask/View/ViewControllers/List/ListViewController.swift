@@ -153,12 +153,9 @@ class ListViewController: UITableViewController, IListView {
         let tableSection = TableSections(rawValue: (sourceIndexPath.section))
         let employee = data[tableSection!]?[(sourceIndexPath.row)]
         data[tableSection!]?.remove(at: (sourceIndexPath.row))
-        data[tableSection!]?.insert(employee!, at: destinationIndexPath.row)
+        data[tableSection!]?.insert(employee!, at: destinationIndexPath.row)        
         
-        print("NEW LIST: \(data[tableSection!])")
-        
-        let employeeRepository = EmployeeRepository()
-        employeeRepository.sortByUser(employees: data[tableSection!]!, typeEmployee: (employee?.position)!)
+        listController?.sortByUser(employees: data[tableSection!]!, typeEmployee: (employee?.position)!)
     }
     
     @IBAction func sortByAlphabet(_ sender: Any) {

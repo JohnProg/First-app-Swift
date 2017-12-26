@@ -15,12 +15,6 @@ class EmployeeRepository {
         employees.append(contentsOf: Chief.query().fetch().reversed())
         employees.append(contentsOf: Accountant.query().fetch().reversed())
         
-        var i = 0
-        for employee in employees {
-            print("Employee \(i) = \(employee)")
-            i += 1
-        }
-        
         return employees as! [Employee]
     }
     
@@ -55,12 +49,12 @@ class EmployeeRepository {
             break
         }
         
-        //var i = employees.count
-        for employee in employees {
-            //employee.id = NSNumber.init(value: i)
-            employee.commit()
-            //i -= 1
+        for i in stride(from: employees.count-1, through: 0, by: -1) {
+            employees[i].id = nil
+            employees[i].commit()
         }
+        
+        print("")
     }
     
     //Тупо костыли. Руки надо бы отрубить :(
@@ -75,11 +69,9 @@ class EmployeeRepository {
         Accountant.query().fetch().removeAll()
         
         let sortedEmployees = querySortedEmployees as! [Employee]
-        var i = 0
         for employee in sortedEmployees {
-            employee.id = NSNumber.init(value: i)
+            employee.id = nil
             employee.commit()
-            i += 1
         }
     }
     

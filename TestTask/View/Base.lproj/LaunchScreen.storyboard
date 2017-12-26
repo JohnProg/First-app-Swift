@@ -18,12 +18,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SplashImg" translatesAutoresizingMaskIntoConstraints="NO" id="h9j-OV-E7M">
-                                <rect key="frame" x="39" y="104" width="296" height="178"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Splash" highlightedImage="Splash" translatesAutoresizingMaskIntoConstraints="NO" id="h9j-OV-E7M">
+                                <rect key="frame" x="60" y="111" width="255" height="79"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="79" id="19c-Sh-83e"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="h9j-OV-E7M" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="91" id="4jB-zL-UjV"/>
+                            <constraint firstItem="h9j-OV-E7M" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="RqQ-c2-cET"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="h9j-OV-E7M" secondAttribute="trailing" constant="60" id="tj5-4f-FF4"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -33,6 +40,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="SplashImg" width="250" height="177"/>
+        <image name="Splash" width="200" height="70"/>
     </resources>
 </document>

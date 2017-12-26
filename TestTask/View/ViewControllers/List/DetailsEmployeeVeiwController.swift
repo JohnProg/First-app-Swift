@@ -1,4 +1,5 @@
 import UIKit
+import Toast_Swift
 
 class DetailsEmployeeVeiwController: UIViewController, IDetailsEmployeeView {
 
@@ -80,6 +81,7 @@ class DetailsEmployeeVeiwController: UIViewController, IDetailsEmployeeView {
         default:
             break
         }
+        self.view.makeToast("Изменения сохранены")
     }
     
     func saveNewEmployee() {
@@ -111,12 +113,9 @@ class DetailsEmployeeVeiwController: UIViewController, IDetailsEmployeeView {
         default:
             break
         }
+        self.view.makeToast("Новый сотрудник сохранен")
     }
-    
-    
-    
-    
-    
+
     func visibleFields() {
         switch typeEmployee.selectedSegmentIndex {
         case 0:

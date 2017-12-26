@@ -3,9 +3,6 @@ import UIKit
 class ListViewController: UITableViewController, IListView {
     
     @IBOutlet var employeeViewTable: UITableView!
-    private let CHIEF = "Руководитель"
-    private let EMPLOYEE = "Сотрудник"
-    private let ACCOUNTANT = "Бухгалтер"
     
     private let SectionHeaderHeight: CGFloat = 25
     private var data = [TableSections: [Employee]]()
@@ -36,7 +33,7 @@ class ListViewController: UITableViewController, IListView {
     }
 
     //Отображаем список сотрудников
-    func showEmployees(loadedEmployees: [Employee]) {
+    func showEmployees(loadedEmployees: [Employee]) {        
         employees = loadedEmployees
         sortEmployeesByType()
         employeeViewTable.reloadData()

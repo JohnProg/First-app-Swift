@@ -16,9 +16,10 @@ public class QuotesReposytory {
             
             for quote in arrayQuotes {
                 let newQuote = Quote()
+                let description = self.decodeString(encodedString: quote["description"].stringValue)
                 
                 newQuote.setAutor(name: quote["id"].stringValue)
-                newQuote.setQuote(quote: quote["description"].stringValue)
+                newQuote.setQuote(quote: (description?.string)!)
                 newQuote.setRating(newRating: quote["rating"].stringValue)
                 newQuote.setDateTime(newDateTime: quote["time"].stringValue)
                 
@@ -26,6 +27,17 @@ public class QuotesReposytory {
             }
             
             comletionHandler(resultQuotes)
+        }
+    }
+    
+    private func decodeString(encodedString: String) -> NSAttributedString?
+    {
+        let encodedData = encodedString.data(using: String.Encoding.utf8)!
+        do {
+            return try NSAttributedString(data: encodedData, options: [.documentType: NSAttributedString.DocumentType.html, .characterEncoding: String.Encoding.utf8.rawValue], documentAttributes: nil)
+        } catch let error as NSError {
+            print(error.localizedDescription)
+            return nil
         }
     }
 }

@@ -18,6 +18,7 @@
 		112BC6271FE7A59900A71AD8 /* IDetailsEmployeeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112BC6261FE7A59900A71AD8 /* IDetailsEmployeeController.swift */; };
 		112BC6291FE7A5F300A71AD8 /* IDetailsEmployeeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112BC6281FE7A5F300A71AD8 /* IDetailsEmployeeView.swift */; };
 		113286CA1FF0C15C00CB782A /* ImageSlideshow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 113286CB1FF0C15C00CB782A /* ImageSlideshow.framework */; };
+		114F54031FF246AD007ABB1F /* PositionsEmployee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114F54021FF246AD007ABB1F /* PositionsEmployee.swift */; };
 		1151409B1FE9158E00E077B1 /* ListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1151409A1FE9158E00E077B1 /* ListController.swift */; };
 		11758B3C1FE3A6E20012ABAB /* Chief.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11758B3B1FE3A6E20012ABAB /* Chief.swift */; };
 		11758B3F1FE3A7610012ABAB /* CommonEmployee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11758B3E1FE3A7610012ABAB /* CommonEmployee.swift */; };
@@ -67,6 +68,7 @@
 		113286C21FF0C09100CB782A /* ImageSlideshow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ImageSlideshow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		113286C91FF0C0FB00CB782A /* ImageSlideshow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ImageSlideshow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		113286CB1FF0C15C00CB782A /* ImageSlideshow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ImageSlideshow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		114F54021FF246AD007ABB1F /* PositionsEmployee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionsEmployee.swift; sourceTree = "<group>"; };
 		1151409A1FE9158E00E077B1 /* ListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListController.swift; sourceTree = "<group>"; };
 		11758B3B1FE3A6E20012ABAB /* Chief.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chief.swift; sourceTree = "<group>"; };
 		11758B3E1FE3A7610012ABAB /* CommonEmployee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonEmployee.swift; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 				11758B3B1FE3A6E20012ABAB /* Chief.swift */,
 				11758B3E1FE3A7610012ABAB /* CommonEmployee.swift */,
 				11758B401FE3A80D0012ABAB /* Accountant.swift */,
+				114F54021FF246AD007ABB1F /* PositionsEmployee.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -452,6 +455,7 @@
 				1123B40E1FE913E300496765 /* IListView.swift in Sources */,
 				11FBED5B1FDA5AEB00E0E3A5 /* ServiceViewController.swift in Sources */,
 				117F2FAD1FE27688006552E8 /* DetailsEmployeeVeiwController.swift in Sources */,
+				114F54031FF246AD007ABB1F /* PositionsEmployee.swift in Sources */,
 				11758B441FE3A9AA0012ABAB /* DetailsEmployeeController.swift in Sources */,
 				11FBED621FDA974400E0E3A5 /* Quote.swift in Sources */,
 				112BC6291FE7A5F300A71AD8 /* IDetailsEmployeeView.swift in Sources */,

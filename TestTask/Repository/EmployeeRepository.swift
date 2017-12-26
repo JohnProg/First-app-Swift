@@ -39,11 +39,11 @@ class EmployeeRepository {
     
     public func sortByUser(employees: [Employee], typeEmployee: String) {
         switch typeEmployee {
-        case "Руководитель":
+        case PosisitionsEmployee.Chief.rawValue:
             Chief.query().fetch().removeAll()
-        case "Сотрудник":
+        case PosisitionsEmployee.CommonEmployee.rawValue:
             CommonEmployee.query().fetch().removeAll()
-        case "Бухгалтер":
+        case PosisitionsEmployee.Accountant.rawValue:
             Accountant.query().fetch().removeAll()
         default:
             break
@@ -53,8 +53,6 @@ class EmployeeRepository {
             employees[i].id = nil
             employees[i].commit()
         }
-        
-        print("")
     }
     
     //Тупо костыли. Руки надо бы отрубить :(

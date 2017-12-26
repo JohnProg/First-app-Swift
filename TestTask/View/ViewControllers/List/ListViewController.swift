@@ -44,9 +44,9 @@ class ListViewController: UITableViewController, IListView {
     
     //Сортировка сотрудников по типу
     func sortEmployeesByType() {
-        data[.chief] = employees?.filter({$0 .position! == CHIEF})
-        data[.common_employee] = employees?.filter({$0 .position! == EMPLOYEE})
-        data[.accountant] = employees?.filter({$0 .position! == ACCOUNTANT})
+        data[.chief] = employees?.filter({$0 .position! == PosisitionsEmployee.Chief.rawValue})
+        data[.common_employee] = employees?.filter({$0 .position! == PosisitionsEmployee.CommonEmployee.rawValue})
+        data[.accountant] = employees?.filter({$0 .position! == PosisitionsEmployee.Accountant.rawValue})
     }
     
     //Открывает экран для редактирования

@@ -54,7 +54,7 @@ class DetailsEmployeeVeiwController: UIViewController, IDetailsEmployeeView {
         case 0:
             let chief = Chief()
             chief.id = employee?.id
-            chief.position = "Руководитель"
+            chief.position = PosisitionsEmployee.Chief.rawValue
             chief.fullName = fieldFullName.text
             chief.salary = NSNumber(value: Int(fieldSalary.text!)!)
             chief.buisnesTime = fieldBuisnessHours.text
@@ -62,7 +62,7 @@ class DetailsEmployeeVeiwController: UIViewController, IDetailsEmployeeView {
         case 1:
             let commonEmployee = CommonEmployee()
             commonEmployee.id = employee?.id
-            commonEmployee.position = "Сотрудник"
+            commonEmployee.position = PosisitionsEmployee.CommonEmployee.rawValue
             commonEmployee.fullName = fieldFullName.text
             commonEmployee.salary = NSNumber(value: Int(fieldSalary.text!)!)
             commonEmployee.lunchTime = fieldLunchTime.text
@@ -71,7 +71,7 @@ class DetailsEmployeeVeiwController: UIViewController, IDetailsEmployeeView {
         case 2:
             let accountant = Accountant()
             accountant.id = employee?.id
-            accountant.position = "Бухгалтер"
+            accountant.position = PosisitionsEmployee.Accountant.rawValue
             accountant.fullName = fieldFullName.text
             accountant.salary = NSNumber(value: Int(fieldSalary.text!)!)
             accountant.lunchTime = fieldLunchTime.text
@@ -88,14 +88,14 @@ class DetailsEmployeeVeiwController: UIViewController, IDetailsEmployeeView {
         switch typeEmployee.selectedSegmentIndex {
         case 0:
             let chief = Chief()
-            chief.position = "Руководитель"
+            chief.position = PosisitionsEmployee.Chief.rawValue
             chief.fullName = fieldFullName.text
             chief.salary = NSNumber(value: Int(fieldSalary.text!)!)
             chief.buisnesTime = fieldBuisnessHours.text
             model?.saveEmployee(employee: chief)
         case 1:
             let commonEmployee = CommonEmployee()
-            commonEmployee.position = "Сотрудник"
+            commonEmployee.position = PosisitionsEmployee.CommonEmployee.rawValue
             commonEmployee.fullName = fieldFullName.text
             commonEmployee.salary = NSNumber(value: Int(fieldSalary.text!)!)
             commonEmployee.lunchTime = fieldLunchTime.text
@@ -103,7 +103,7 @@ class DetailsEmployeeVeiwController: UIViewController, IDetailsEmployeeView {
             model?.saveEmployee(employee: commonEmployee)
         case 2:
             let accountant = Accountant()
-            accountant.position = "Бухгалтер"
+            accountant.position = PosisitionsEmployee.Accountant.rawValue
             accountant.fullName = fieldFullName.text
             accountant.salary = NSNumber(value: Int(fieldSalary.text!)!)
             accountant.lunchTime = fieldLunchTime.text
@@ -146,16 +146,16 @@ class DetailsEmployeeVeiwController: UIViewController, IDetailsEmployeeView {
         fieldSalary.text = employee.salary?.stringValue
         
         switch employee.position! {
-        case "Руководитель":
+        case PosisitionsEmployee.Chief.rawValue:
             typeEmployee.selectedSegmentIndex = 0
             let chief = employee as! Chief
             fieldBuisnessHours.text = chief.buisnesTime
-        case "Сотрудник":
+        case PosisitionsEmployee.CommonEmployee.rawValue:
             typeEmployee.selectedSegmentIndex = 1
             let commonEmployee = employee as! CommonEmployee
             fieldWorkplace.text = commonEmployee.numberWorkspace?.stringValue
             fieldLunchTime.text = commonEmployee.lunchTime
-        case "Бухгалтер":
+        case PosisitionsEmployee.Accountant.rawValue:
             typeEmployee.selectedSegmentIndex = 2
             let accountant = employee as! Accountant
             fieldWorkplace.text = accountant.numberWorkspace?.stringValue

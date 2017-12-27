@@ -5,3 +5,5 @@
 "section_employee" = "Сотрудники";
 "section_accountant" = "Бухгалтеры";
 "salary" = "Зарплата";
+"list_is_empty" = "Список пуст";
+"edit_employee" = "Изменить сотрудника";

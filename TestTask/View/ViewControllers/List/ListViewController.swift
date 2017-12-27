@@ -3,6 +3,7 @@ import UIKit
 class ListViewController: UITableViewController, IListView {
     
     @IBOutlet var employeeViewTable: UITableView!
+    var listIsEmpty: UILabel!
     
     private let SectionHeaderHeight: CGFloat = 25
     private var data = [TableSections: [Employee]]()
@@ -21,6 +22,7 @@ class ListViewController: UITableViewController, IListView {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         employeeViewTable.tableFooterView = UIView()
         
         navigationItem.leftBarButtonItem = editButtonItem
@@ -34,10 +36,28 @@ class ListViewController: UITableViewController, IListView {
     }
 
     //Отображаем список сотрудников
-    func showEmployees(loadedEmployees: [Employee]) {        
+    func showEmployees(loadedEmployees: [Employee]) {
+        if loadedEmployees.count == 0 {
+            showListIsEmptyView()
+        } else {
+            employeeViewTable.backgroundView = nil
+        }
+        
         employees = loadedEmployees
         sortEmployeesByType()
         employeeViewTable.reloadData()
+    }
+    
+    func showListIsEmptyView() {
+        listIsEmpty = UILabel(frame: CGRect(x: 0,
+                                            y: 0,
+                                            width: self.view.bounds.size.width,
+                                            height: self.view.bounds.size.height))
+        
+        listIsEmpty.numberOfLines = 0
+        listIsEmpty.textAlignment = .center
+        listIsEmpty.text = NSLocalizedString("list_is_empty", comment: "")
+        employeeViewTable.backgroundView = listIsEmpty
     }
     
     //Сортировка сотрудников по типу

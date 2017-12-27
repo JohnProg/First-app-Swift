@@ -4,3 +4,6 @@
 "section_chiefs" = "Chiefs";
 "section_employee" = "Employees";
 "section_accountant" = "Accountant";
+"salary" = "Salary";
+"list_is_empty" = "List is Empty";
+"edit_employee" = "Edit employee";

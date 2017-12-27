@@ -27,7 +27,7 @@ class DetailsEmployeeVeiwController: UIViewController, IDetailsEmployeeView {
         model?.attachView(viewController: self)
         
         if employee != nil {
-            self.title = "Edit employee"
+            self.title = NSLocalizedString("edit_employee", comment: "")
             setFieldsForEditMode(employee: employee!)
             isEditMode = true
         }

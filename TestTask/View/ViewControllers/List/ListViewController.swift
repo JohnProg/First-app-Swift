@@ -21,6 +21,7 @@ class ListViewController: UITableViewController, IListView {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        employeeViewTable.tableFooterView = UIView()
         
         navigationItem.leftBarButtonItem = editButtonItem
         

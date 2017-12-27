@@ -28,6 +28,7 @@ public class ServiceViewController: UIViewController,
     
     override
     public func viewDidAppear(_ animated: Bool) {
+        trobber.isHidden = false
         trobber.startAnimating()
         quotesTableView.isHidden = true
         

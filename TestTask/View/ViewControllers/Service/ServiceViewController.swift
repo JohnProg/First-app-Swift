@@ -23,6 +23,11 @@ public class ServiceViewController: UIViewController,
         controller = ServiceController()
         controller?.attachView(newView: self)
         
+        quotesTableView.refreshControl = UIRefreshControl()
+        quotesTableView.refreshControl?.backgroundColor = UIColor.white
+        quotesTableView.refreshControl?.tintColor = UIColor.black
+        quotesTableView.refreshControl?.addTarget(self, action: #selector(reloadQuotes), for: UIControlEvents.valueChanged)
+        
         super.viewDidLoad()
     }
     
@@ -37,7 +42,16 @@ public class ServiceViewController: UIViewController,
         controller?.viewIsReady()
     }
     
+    @objc func reloadQuotes() {
+        controller?.viewIsReady()
+        
+    }
+    
     public func showQuotes(quotes: Array<Quote>) {
+        if quotesTableView.refreshControl != nil {
+            quotesTableView.refreshControl?.endRefreshing()
+        }
+    
         self.quotes = quotes
         quotesTableView.reloadData()
         trobber.isHidden = true

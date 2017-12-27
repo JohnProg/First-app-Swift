@@ -1,0 +1,96 @@
+
+/* Class = "UINavigationItem"; title = "Service"; ObjectID = "5VO-zM-PsP"; */
+"5VO-zM-PsP.title" = "Service";
+
+/* Class = "UIBarButtonItem"; title = "Save"; ObjectID = "7Ob-eN-HjR"; */
+"7Ob-eN-HjR.title" = "Save";
+
+/* Class = "UILabel"; text = "Дата публикации:"; ObjectID = "7vU-ya-Fqa"; */
+"7vU-ya-Fqa.text" = "Pubication date:";
+
+/* Class = "UITextField"; placeholder = "Зарплата"; ObjectID = "CvA-4E-B55"; */
+"CvA-4E-B55.placeholder" = "Salary";
+
+/* Class = "UITextField"; placeholder = "Обеденное время"; ObjectID = "Fml-34-sVt"; */
+"Fml-34-sVt.placeholder" = "Lunch time";
+
+/* Class = "UILabel"; text = "lblQuote"; ObjectID = "G6q-l4-MVr"; */
+"G6q-l4-MVr.text" = "lblQuote";
+
+/* Class = "UITextField"; placeholder = "Часы приема"; ObjectID = "Jl6-1n-F4s"; */
+"Jl6-1n-F4s.placeholder" = "Buisnes time";
+
+/* Class = "UISegmentedControl"; NNV-4s-pJi.segmentTitles[0] = "Руководство"; ObjectID = "NNV-4s-pJi"; */
+"NNV-4s-pJi.segmentTitles[0]" = "Chiefs";
+
+/* Class = "UISegmentedControl"; NNV-4s-pJi.segmentTitles[1] = "Сотрудники"; ObjectID = "NNV-4s-pJi"; */
+"NNV-4s-pJi.segmentTitles[1]" = "Employees";
+
+/* Class = "UISegmentedControl"; NNV-4s-pJi.segmentTitles[2] = "Бухгалтерия"; ObjectID = "NNV-4s-pJi"; */
+"NNV-4s-pJi.segmentTitles[2]" = "Accountant";
+
+/* Class = "UINavigationItem"; title = "Gallery"; ObjectID = "NWS-JI-G3D"; */
+"NWS-JI-G3D.title" = "Gallery";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "NbD-ST-iCW"; */
+"NbD-ST-iCW.title" = "Item";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "PPD-0S-Gl8"; */
+"PPD-0S-Gl8.title" = "Back";
+
+/* Class = "UIBarButtonItem"; title = "Edit"; ObjectID = "QfH-46-WbB"; */
+"QfH-46-WbB.title" = "Edit";
+
+/* Class = "UITextField"; placeholder = "Номер рабочего места"; ObjectID = "QkZ-Id-OpL"; */
+"QkZ-Id-OpL.placeholder" = "Workspace number";
+
+/* Class = "UIBarButtonItem"; title = "Sort"; ObjectID = "R2f-e3-Xdq"; */
+"R2f-e3-Xdq.title" = "Sort";
+
+/* Class = "UIBarButtonItem"; title = "Add"; ObjectID = "Tc5-Yh-Jrp"; */
+"Tc5-Yh-Jrp.title" = "Add";
+
+/* Class = "UISegmentedControl"; VZf-Jv-nWC.segmentTitles[0] = "Зарплата"; ObjectID = "VZf-Jv-nWC"; */
+"VZf-Jv-nWC.segmentTitles[0]" = "Salary";
+
+/* Class = "UISegmentedControl"; VZf-Jv-nWC.segmentTitles[1] = "Учет"; ObjectID = "VZf-Jv-nWC"; */
+"VZf-Jv-nWC.segmentTitles[1]" = "Accounting";
+
+/* Class = "UILabel"; text = "Тип бухгалтера:"; ObjectID = "VtS-yf-i9i"; */
+"VtS-yf-i9i.text" = "Accountant type:";
+
+/* Class = "UILabel"; text = "Зарплата:"; ObjectID = "YoE-Bw-JTl"; */
+"YoE-Bw-JTl.text" = "Salary:";
+
+/* Class = "UINavigationItem"; title = "Add employee"; ObjectID = "Yol-mf-Rvp"; */
+"Yol-mf-Rvp.title" = "Add employee";
+
+/* Class = "UITabBarItem"; title = "Gallery"; ObjectID = "cPa-gy-q4n"; */
+"cPa-gy-q4n.title" = "Gallery";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "cwA-Tx-AVd"; */
+"cwA-Tx-AVd.title" = "Item";
+
+/* Class = "UILabel"; text = "ФИО:"; ObjectID = "eYO-JG-T5R"; */
+"eYO-JG-T5R.text" = "Full name:";
+
+/* Class = "UITabBarItem"; title = "List"; ObjectID = "fH9-UI-4C0"; */
+"fH9-UI-4C0.title" = "List";
+
+/* Class = "UINavigationItem"; title = "Edit employee"; ObjectID = "fyw-ga-2z0"; */
+"fyw-ga-2z0.title" = "Edit employee";
+
+/* Class = "UILabel"; text = "Рейтинг:"; ObjectID = "p8L-99-gLd"; */
+"p8L-99-gLd.text" = "Rating:";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "qEt-k2-aP2"; */
+"qEt-k2-aP2.title" = "Item";
+
+/* Class = "UITabBarItem"; title = "Service"; ObjectID = "qgz-TE-rdf"; */
+"qgz-TE-rdf.title" = "Service";
+
+/* Class = "UITextField"; placeholder = "ФИО"; ObjectID = "v1c-uy-36S"; */
+"v1c-uy-36S.placeholder" = "Full name";
+
+/* Class = "UINavigationItem"; title = "List"; ObjectID = "wGG-E9-eCt"; */
+"wGG-E9-eCt.title" = "List";

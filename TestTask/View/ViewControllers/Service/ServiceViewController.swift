@@ -53,7 +53,7 @@ public class ServiceViewController: UIViewController,
         
         cell.lblQuote.text = quote.getQuote()
         cell.lblDateTimeCreated.text = quote.getDateTime()
-        cell.lblRating.text = "Рейтинг: \(quote.getRating())"
+        cell.lblRating.text = NSLocalizedString("rating", comment: "") + ": \(quote.getRating())"
         
         return cell
     }

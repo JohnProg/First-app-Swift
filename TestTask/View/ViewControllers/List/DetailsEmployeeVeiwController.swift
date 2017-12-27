@@ -81,7 +81,7 @@ class DetailsEmployeeVeiwController: UIViewController, IDetailsEmployeeView {
         default:
             break
         }
-        self.view.makeToast("Изменения сохранены")
+        self.view.makeToast(NSLocalizedString("edited", comment: ""))
     }
     
     func saveNewEmployee() {
@@ -113,7 +113,7 @@ class DetailsEmployeeVeiwController: UIViewController, IDetailsEmployeeView {
         default:
             break
         }
-        self.view.makeToast("Новый сотрудник сохранен")
+        self.view.makeToast(NSLocalizedString("added", comment: ""))
     }
 
     func visibleFields() {

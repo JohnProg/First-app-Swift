@@ -88,11 +88,11 @@ class ListViewController: UITableViewController, IListView {
         if let tableSection = TableSections(rawValue: section) {
             switch tableSection {
             case .chief:
-                label.text = "Руководители"
+                label.text = NSLocalizedString("section_chiefs", comment: "")
             case .common_employee:
-                label.text = "Сотрудники"
+                label.text = NSLocalizedString("section_employee", comment: "")
             case .accountant:
-                label.text = "Бухгалтеры"
+                label.text = NSLocalizedString("section_accountant", comment: "")
             default:
                 label.text = ""
             }
@@ -106,7 +106,7 @@ class ListViewController: UITableViewController, IListView {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! EmployeeViewCell
         if let tableSection = TableSections(rawValue: indexPath.section), let employee = data[tableSection]?[indexPath.row] {
             cell.lblFullName.text = employee.fullName
-            cell.lblSalary.text = employee.salary?.stringValue
+            cell.lblSalary.text = NSLocalizedString("salary", comment: "") + ": " + (employee.salary?.stringValue)!
         }
         return cell
     }

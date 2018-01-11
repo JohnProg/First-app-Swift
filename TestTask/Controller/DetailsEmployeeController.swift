@@ -16,11 +16,13 @@ class DetailsEmployeeController : IDetailsEmployeeController {
     public func saveEmployee(employee: Employee) {
         let employeeRepository = EmployeeRepository()
         employeeRepository.saveEmployee(employee: employee)
+        view?.employeeWasSaved()
     }
     
     public func editEmployee(employee: Employee) {
         let employeeRepository = EmployeeRepository()
         employeeRepository.editEmployee(editedEmploye: employee)
+        view?.employeeWasSaved()
     }
     
 }

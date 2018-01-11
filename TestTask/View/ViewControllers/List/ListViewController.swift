@@ -127,7 +127,7 @@ class ListViewController: UITableViewController, IListView {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! EmployeeViewCell
         if let tableSection = TableSections(rawValue: indexPath.section), let employee = data[tableSection]?[indexPath.row] {
             cell.lblFullName.text = employee.fullName
-            cell.lblSalary.text = NSLocalizedString("salary", comment: "") + ": " + (employee.salary?.stringValue)!
+            cell.lblSalary.text = NSLocalizedString("salary", comment: "") + ": \(employee.salary ?? 0)"
         }
         return cell
     }

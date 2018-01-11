@@ -212,7 +212,7 @@
                         <outlet property="fieldFullName" destination="v1c-uy-36S" id="ubI-xh-uRf"/>
                         <outlet property="fieldLunchTime" destination="Fml-34-sVt" id="HwV-cd-RnT"/>
                         <outlet property="fieldSalary" destination="CvA-4E-B55" id="Jkj-XW-xfw"/>
-                        <outlet property="fieldWorkplace" destination="QkZ-Id-OpL" id="IJ2-Ab-vra"/>
+                        <outlet property="fieldWorkspace" destination="QkZ-Id-OpL" id="IJ2-Ab-vra"/>
                         <outlet property="txtTypeAccountant" destination="VtS-yf-i9i" id="4Ws-el-lEW"/>
                         <outlet property="typeAccountant" destination="VZf-Jv-nWC" id="QUz-en-7k8"/>
                         <outlet property="typeEmployee" destination="NNV-4s-pJi" id="zXP-4K-rhp"/>

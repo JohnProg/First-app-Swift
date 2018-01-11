@@ -10,7 +10,7 @@ class DetailsEmployeeVeiwController: UIViewController, IDetailsEmployeeView {
     
     @IBOutlet weak var fieldBuisnessHours: UITextField!
     
-    @IBOutlet weak var fieldWorkplace: UITextField!
+    @IBOutlet weak var fieldWorkspace: UITextField!
     @IBOutlet weak var fieldLunchTime: UITextField!
     
     @IBOutlet weak var typeAccountant: UISegmentedControl!
@@ -58,25 +58,35 @@ class DetailsEmployeeVeiwController: UIViewController, IDetailsEmployeeView {
             let chief = Chief()
             chief.position = PosisitionsEmployee.Chief.rawValue
             chief.fullName = fieldFullName.text
-            chief.salary = NSNumber(value: Int(fieldSalary.text!)!)
+            if let salary = Int(fieldSalary.text!) {
+                chief.salary = NSNumber(value: salary)
+            }
             chief.buisnesTime = fieldBuisnessHours.text
             return chief
         case 1:
             let commonEmployee = CommonEmployee()
             commonEmployee.position = PosisitionsEmployee.CommonEmployee.rawValue
             commonEmployee.fullName = fieldFullName.text
-            commonEmployee.salary = NSNumber(value: Int(fieldSalary.text!)!)
             commonEmployee.lunchTime = fieldLunchTime.text
-            commonEmployee.numberWorkspace = NSNumber(value: Int(fieldWorkplace.text!)!)
+            if let salary = Int(fieldSalary.text!) {
+                commonEmployee.salary = NSNumber(value: salary)
+            }
+            if let numberWorkspace = Int(fieldWorkspace.text!) {
+                commonEmployee.numberWorkspace = NSNumber(value: numberWorkspace)
+            }
             return commonEmployee
         case 2:
             let accountant = Accountant()
             accountant.position = PosisitionsEmployee.Accountant.rawValue
             accountant.fullName = fieldFullName.text
-            accountant.salary = NSNumber(value: Int(fieldSalary.text!)!)
             accountant.lunchTime = fieldLunchTime.text
-            accountant.numberWorkspace = NSNumber(value: Int(fieldWorkplace.text!)!)
             accountant.typeAccountant = typeAccountant.selectedSegmentIndex == 0 ? "salary" : "materials"
+            if let salary = Int(fieldSalary.text!) {
+                accountant.salary = NSNumber(value: salary)
+            }
+            if let numberWorkspace = Int(fieldWorkspace.text!) {
+                accountant.numberWorkspace = NSNumber(value: numberWorkspace)
+            }
             return accountant
         default:
             return nil
@@ -87,18 +97,18 @@ class DetailsEmployeeVeiwController: UIViewController, IDetailsEmployeeView {
         switch typeEmployee.selectedSegmentIndex {
         case 0:
             fieldBuisnessHours.isEnabled = true
-            fieldWorkplace.isEnabled = false
+            fieldWorkspace.isEnabled = false
             fieldLunchTime.isEnabled = false
             typeAccountant.isEnabled = false
             txtTypeAccountant.isEnabled = false
         case 1:
-            fieldWorkplace.isEnabled = true
+            fieldWorkspace.isEnabled = true
             fieldLunchTime.isEnabled = true
             fieldBuisnessHours.isEnabled = false
             typeAccountant.isEnabled = false
             txtTypeAccountant.isEnabled = false
         case 2:
-            fieldWorkplace.isEnabled = true
+            fieldWorkspace.isEnabled = true
             fieldLunchTime.isEnabled = true
             typeAccountant.isEnabled = true
             txtTypeAccountant.isEnabled = true
@@ -120,12 +130,12 @@ class DetailsEmployeeVeiwController: UIViewController, IDetailsEmployeeView {
         case PosisitionsEmployee.CommonEmployee.rawValue:
             typeEmployee.selectedSegmentIndex = 1
             let commonEmployee = employee as! CommonEmployee
-            fieldWorkplace.text = commonEmployee.numberWorkspace?.stringValue
+            fieldWorkspace.text = commonEmployee.numberWorkspace?.stringValue
             fieldLunchTime.text = commonEmployee.lunchTime
         case PosisitionsEmployee.Accountant.rawValue:
             typeEmployee.selectedSegmentIndex = 2
             let accountant = employee as! Accountant
-            fieldWorkplace.text = accountant.numberWorkspace?.stringValue
+            fieldWorkspace.text = accountant.numberWorkspace?.stringValue
             fieldLunchTime.text = accountant.lunchTime
             typeAccountant.selectedSegmentIndex = accountant.typeAccountant == "salary" ? 0 : 1
         default:

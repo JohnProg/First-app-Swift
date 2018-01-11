@@ -45,30 +45,38 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="20" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Зарплата:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YoE-Bw-JTl">
-                                            <rect key="frame" x="16" y="32" width="343" height="17"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="17" id="mYw-eV-fNq"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="10" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ФИО:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYO-JG-T5R">
-                                            <rect key="frame" x="16" y="11" width="343" height="20"/>
+                                            <rect key="frame" x="84" y="11" width="44" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Employee" translatesAutoresizingMaskIntoConstraints="NO" id="81G-PA-8UQ">
+                                            <rect key="frame" x="16" y="11" width="60" height="60"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="60" id="5HB-dr-S8z"/>
+                                                <constraint firstAttribute="width" constant="60" id="8ax-4n-AWZ"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="20" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Зарплата:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YoE-Bw-JTl">
+                                            <rect key="frame" x="84" y="39.5" width="63" height="16"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="eYO-JG-T5R" firstAttribute="trailing" secondItem="7bJ-j9-bZv" secondAttribute="trailingMargin" id="QKG-QA-F97"/>
-                                        <constraint firstItem="YoE-Bw-JTl" firstAttribute="top" secondItem="7bJ-j9-bZv" secondAttribute="topMargin" constant="21" id="Win-3K-IeI"/>
-                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="YoE-Bw-JTl" secondAttribute="trailing" constant="16" id="h6Q-dS-1sv"/>
-                                        <constraint firstItem="eYO-JG-T5R" firstAttribute="top" secondItem="7bJ-j9-bZv" secondAttribute="topMargin" id="pe6-6Q-vQe"/>
-                                        <constraint firstItem="eYO-JG-T5R" firstAttribute="leading" secondItem="7bJ-j9-bZv" secondAttribute="leadingMargin" id="vo2-cE-CNI"/>
-                                        <constraint firstItem="YoE-Bw-JTl" firstAttribute="width" secondItem="eYO-JG-T5R" secondAttribute="width" id="xpE-PB-aFt"/>
-                                        <constraint firstItem="YoE-Bw-JTl" firstAttribute="leading" secondItem="eYO-JG-T5R" secondAttribute="leading" id="zgi-xn-gQs"/>
+                                        <constraint firstItem="81G-PA-8UQ" firstAttribute="top" secondItem="7bJ-j9-bZv" secondAttribute="topMargin" id="9HO-Qn-Mr1"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="YoE-Bw-JTl" secondAttribute="trailing" constant="20" symbolic="YES" id="Ewy-wj-dui"/>
+                                        <constraint firstItem="eYO-JG-T5R" firstAttribute="top" secondItem="7bJ-j9-bZv" secondAttribute="topMargin" id="Rbi-1R-cy0"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="81G-PA-8UQ" secondAttribute="bottom" constant="8" id="YfB-kf-Qj1"/>
+                                        <constraint firstItem="81G-PA-8UQ" firstAttribute="bottom" secondItem="7bJ-j9-bZv" secondAttribute="bottomMargin" constant="8" id="cYY-sV-T81"/>
+                                        <constraint firstItem="eYO-JG-T5R" firstAttribute="leading" secondItem="81G-PA-8UQ" secondAttribute="trailing" constant="8" id="gQk-Bb-xOn"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="eYO-JG-T5R" secondAttribute="trailing" constant="20" symbolic="YES" id="hx4-Co-mrM"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="YoE-Bw-JTl" secondAttribute="bottom" constant="8" id="kZf-dp-BRB"/>
+                                        <constraint firstItem="81G-PA-8UQ" firstAttribute="leading" secondItem="7bJ-j9-bZv" secondAttribute="leadingMargin" id="lh2-Uq-NSF"/>
+                                        <constraint firstItem="YoE-Bw-JTl" firstAttribute="top" secondItem="eYO-JG-T5R" secondAttribute="bottom" constant="8" id="tP2-7J-JKB"/>
+                                        <constraint firstItem="YoE-Bw-JTl" firstAttribute="leading" secondItem="81G-PA-8UQ" secondAttribute="trailing" constant="8" id="utv-tq-9vU"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -106,7 +114,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gHg-bC-E7H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1353" y="-53"/>
+            <point key="canvasLocation" x="1352.8" y="-53.523238380809602"/>
         </scene>
         <!--Add employee-->
         <scene sceneID="jWH-V1-Tio">
@@ -384,6 +392,7 @@
     </scenes>
     <resources>
         <image name="AddNew" width="24" height="24"/>
+        <image name="Employee" width="24" height="24"/>
         <image name="Gallery" width="24" height="24"/>
         <image name="List" width="24" height="24"/>
         <image name="Save" width="24" height="24"/>

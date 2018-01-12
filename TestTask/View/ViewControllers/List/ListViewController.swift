@@ -16,9 +16,14 @@ class ListViewController: UITableViewController, IListView {
         total
     }
     
-    private var employees: [Employee]?
+    private var employees: [Employee]!
     
-    private var listController: IListController?
+    private var listController: IListController
+    
+    required init?(coder aDecoder: NSCoder) {
+        self.listController = ListController()
+        super.init(coder: aDecoder)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,12 +32,12 @@ class ListViewController: UITableViewController, IListView {
         
         navigationItem.leftBarButtonItem = editButtonItem
         
-        listController = ListController()
-        listController?.attachView(newView: self)
+        //listController = ListController()
+        listController.attachView(newView: self)
     }
     
     override public func viewDidAppear(_ animated: Bool) {
-        listController?.loadEmployees()
+        listController.loadEmployees()
     }
 
     //Отображаем список сотрудников
@@ -62,9 +67,9 @@ class ListViewController: UITableViewController, IListView {
     
     //Сортировка сотрудников по типу
     func sortEmployeesByType() {
-        data[.chief] = employees?.filter({$0 .position! == PosisitionsEmployee.Chief.rawValue})
-        data[.common_employee] = employees?.filter({$0 .position! == PosisitionsEmployee.CommonEmployee.rawValue})
-        data[.accountant] = employees?.filter({$0 .position! == PosisitionsEmployee.Accountant.rawValue})
+        data[.chief] = employees.filter({$0 .position! == PosisitionsEmployee.Chief.rawValue})
+        data[.common_employee] = employees.filter({$0 .position! == PosisitionsEmployee.CommonEmployee.rawValue})
+        data[.accountant] = employees.filter({$0 .position! == PosisitionsEmployee.Accountant.rawValue})
     }
     
     //Открывает экран для редактирования
@@ -143,8 +148,8 @@ class ListViewController: UITableViewController, IListView {
         if editingStyle == UITableViewCellEditingStyle.delete {
             let tableSection = TableSections(rawValue: (indexPath.section))
             let employee = data[tableSection!]?[(indexPath.row)]
-            listController?.removeEmployee(employee: employee!)
-            listController?.loadEmployees()
+            listController.removeEmployee(employee: employee!)
+            listController.loadEmployees()
         }
     }
     
@@ -173,11 +178,11 @@ class ListViewController: UITableViewController, IListView {
         data[tableSection!]?.remove(at: (sourceIndexPath.row))
         data[tableSection!]?.insert(employee!, at: destinationIndexPath.row)        
         
-        listController?.sortByUser(employees: data[tableSection!]!, typeEmployee: (employee?.position)!)
+        listController.sortByUser(employees: data[tableSection!]!, typeEmployee: (employee?.position)!)
     }
     
     @IBAction func sortByAlphabet(_ sender: Any) {
-        listController?.sortByAlphabet()
-        listController?.loadEmployees()
+        listController.sortByAlphabet()
+        listController.loadEmployees()
     }
 }

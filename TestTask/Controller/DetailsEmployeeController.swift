@@ -15,7 +15,7 @@ class DetailsEmployeeController : IDetailsEmployeeController {
     
     public func saveEmployee(employee: Employee) {
         let employeeRepository = EmployeeRepository()
-        employeeRepository.saveEmployee(employee: employee)
+        employeeRepository.saveEmployee(newEmployee: employee)
         view?.employeeWasSaved()
     }
     

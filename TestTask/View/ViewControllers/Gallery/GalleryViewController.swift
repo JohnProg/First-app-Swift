@@ -15,17 +15,11 @@ class GalleryViewController: UIViewController {
         imageSlideshow.pageControl.pageIndicatorTintColor = UIColor.black
         imageSlideshow.contentScaleMode = UIViewContentMode.scaleAspectFit
         imageSlideshow.activityIndicator = DefaultActivityIndicator()
+        imageSlideshow.zoomEnabled = true
         imageSlideshow.circular = false
-        
-        imageSlideshow.setImageInputs(GalleryImages.images as! [InputSource])
-        
-        let recognizer = UITapGestureRecognizer(target: self, action: #selector(GalleryViewController.didTap))
-        imageSlideshow.addGestureRecognizer(recognizer)
-    }
+        imageSlideshow.preload = ImagePreload.fixed(offset: 1)
 
-    @objc func didTap() {
-        let fullScreenController = imageSlideshow.presentFullScreenController(from: self)
-        fullScreenController.slideshow.activityIndicator = DefaultActivityIndicator(style: .white, color: nil)
+        imageSlideshow.setImageInputs(GalleryImages.images as! [InputSource])
     }
     
 }

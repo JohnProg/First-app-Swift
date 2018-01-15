@@ -19,17 +19,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Splash" highlightedImage="Splash" translatesAutoresizingMaskIntoConstraints="NO" id="h9j-OV-E7M">
-                                <rect key="frame" x="60" y="111" width="255" height="79"/>
+                                <rect key="frame" x="87" y="110" width="200" height="70"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="79" id="19c-Sh-83e"/>
+                                    <constraint firstAttribute="width" constant="200" id="C5U-oq-eVj"/>
+                                    <constraint firstAttribute="height" constant="70" id="v28-Hg-Xbn"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="h9j-OV-E7M" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="91" id="4jB-zL-UjV"/>
-                            <constraint firstItem="h9j-OV-E7M" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="RqQ-c2-cET"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="h9j-OV-E7M" secondAttribute="trailing" constant="60" id="tj5-4f-FF4"/>
+                            <constraint firstItem="h9j-OV-E7M" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="90" id="Cc5-U5-aRt"/>
+                            <constraint firstItem="h9j-OV-E7M" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="RSD-sx-yjC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

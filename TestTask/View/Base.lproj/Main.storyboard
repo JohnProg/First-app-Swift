@@ -16,7 +16,7 @@
         <scene sceneID="0Pj-04-6a7">
             <objects>
                 <navigationController id="ADL-qp-w3I" userLabel="List" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="NbD-ST-iCW"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="ListIcon" id="NbD-ST-iCW"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1BM-4B-cO3">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -51,7 +51,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Employee" translatesAutoresizingMaskIntoConstraints="NO" id="81G-PA-8UQ">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EmployeeIcon" translatesAutoresizingMaskIntoConstraints="NO" id="81G-PA-8UQ">
                                             <rect key="frame" x="16" y="11" width="60" height="60"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="60" id="5HB-dr-S8z"/>
@@ -91,15 +91,15 @@
                             <outlet property="delegate" destination="wss-7W-37Q" id="X8a-ln-DN0"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="List" image="List" id="fH9-UI-4C0"/>
+                    <tabBarItem key="tabBarItem" title="List" image="ListIcon" id="fH9-UI-4C0"/>
                     <navigationItem key="navigationItem" title="List" id="wGG-E9-eCt">
                         <rightBarButtonItems>
-                            <barButtonItem title="Add" image="AddNew" id="Tc5-Yh-Jrp">
+                            <barButtonItem title="Add" image="AddNewIcon" id="Tc5-Yh-Jrp">
                                 <connections>
                                     <segue destination="Ric-sW-U5h" kind="show" id="RcX-pt-8cR"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem title="Sort" image="SortAlphabet" id="R2f-e3-Xdq">
+                            <barButtonItem title="Sort" image="SortAlphabetIcon" id="R2f-e3-Xdq">
                                 <connections>
                                     <action selector="sortByAlphabet:" destination="wss-7W-37Q" id="jD0-OZ-XRW"/>
                                 </connections>
@@ -200,7 +200,7 @@
                         <viewLayoutGuide key="safeArea" id="ntX-iK-Fbt"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add employee" id="Yol-mf-Rvp">
-                        <barButtonItem key="rightBarButtonItem" title="Save" image="Save" largeContentSizeImage="Save" style="plain" id="7Ob-eN-HjR">
+                        <barButtonItem key="rightBarButtonItem" title="Save" image="SaveIcon" largeContentSizeImage="Save" style="plain" id="7Ob-eN-HjR">
                             <connections>
                                 <action selector="saveEmployee:" destination="Ric-sW-U5h" id="mtz-d9-Xvl"/>
                             </connections>
@@ -226,7 +226,7 @@
         <scene sceneID="LWP-5U-a8z">
             <objects>
                 <navigationController id="QsF-EE-QL5" userLabel="Service" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="cwA-Tx-AVd"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="ServiceIcon" id="cwA-Tx-AVd"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JNG-s0-IrG">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -313,7 +313,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="jXF-is-JSD"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Service" image="Service" id="qgz-TE-rdf"/>
+                    <tabBarItem key="tabBarItem" title="Service" image="ServiceIcon" id="qgz-TE-rdf"/>
                     <navigationItem key="navigationItem" title="Service" id="5VO-zM-PsP" userLabel="Service">
                         <barButtonItem key="backBarButtonItem" title="Back" id="PPD-0S-Gl8"/>
                     </navigationItem>
@@ -343,7 +343,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Gallery" image="Gallery" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Gallery" image="GalleryIcon" id="cPa-gy-q4n"/>
                     <navigationItem key="navigationItem" title="Gallery" id="NWS-JI-G3D"/>
                     <connections>
                         <outlet property="imageSlideshow" destination="22j-wu-Vzh" id="9oi-ZN-w1s"/>
@@ -357,7 +357,7 @@
         <scene sceneID="zDo-fx-vpf">
             <objects>
                 <navigationController id="yEL-79-Fhf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="qEt-k2-aP2"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="GalleryIcon" id="qEt-k2-aP2"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1Ea-di-cKy" userLabel="Gallery">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -391,13 +391,14 @@
         </scene>
     </scenes>
     <resources>
-        <image name="AddNew" width="24" height="24"/>
-        <image name="Employee" width="24" height="24"/>
-        <image name="Gallery" width="24" height="24"/>
-        <image name="List" width="24" height="24"/>
+        <image name="AddNewIcon" width="24" height="24"/>
+        <image name="EmployeeIcon" width="24" height="24"/>
+        <image name="GalleryIcon" width="24" height="24"/>
+        <image name="ListIcon" width="24" height="24"/>
         <image name="Save" width="24" height="24"/>
-        <image name="Service" width="24" height="24"/>
-        <image name="SortAlphabet" width="24" height="24"/>
+        <image name="SaveIcon" width="24" height="24"/>
+        <image name="ServiceIcon" width="24" height="24"/>
+        <image name="SortAlphabetIcon" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="hQp-bQ-hUS"/>

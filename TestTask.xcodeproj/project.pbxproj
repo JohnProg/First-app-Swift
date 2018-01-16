@@ -111,6 +111,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11004871200DD825004C6853 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				113286CC1FF0C4B800CB782A /* Gallery */,
+				11758B3A1FE3A6B20012ABAB /* Service */,
+				11758B391FE3A6A30012ABAB /* List */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		11004873200DD886004C6853 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				11FBED4F1FDA501600E0E3A5 /* Assets.xcassets */,
+				114F540F1FF25470007ABB1F /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		113286CC1FF0C4B800CB782A /* Gallery */ = {
 			isa = PBXGroup;
 			children = (
@@ -259,23 +278,12 @@
 				115140A31FE9264300E077B1 /* View */,
 				115140A11FE925E900E077B1 /* Controller */,
 				115140A21FE9260200E077B1 /* Repository */,
-				11FBED601FDA970700E0E3A5 /* Data */,
+				11004871200DD825004C6853 /* Entity */,
+				11004873200DD886004C6853 /* Resources */,
 				11FBED461FDA501600E0E3A5 /* AppDelegate.swift */,
 				11FBED541FDA501600E0E3A5 /* Info.plist */,
-				11FBED4F1FDA501600E0E3A5 /* Assets.xcassets */,
-				114F540F1FF25470007ABB1F /* Localizable.strings */,
 			);
 			path = TestTask;
-			sourceTree = "<group>";
-		};
-		11FBED601FDA970700E0E3A5 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				113286CC1FF0C4B800CB782A /* Gallery */,
-				11758B3A1FE3A6B20012ABAB /* Service */,
-				11758B391FE3A6A30012ABAB /* List */,
-			);
-			path = Data;
 			sourceTree = "<group>";
 		};
 		8607D318F8DC7BCD2AC05D5B /* Frameworks */ = {

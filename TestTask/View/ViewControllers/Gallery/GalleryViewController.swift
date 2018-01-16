@@ -13,6 +13,7 @@ class GalleryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        btnLeft.isEnabled = false
         initImageSladeshow()
     }
     
@@ -30,7 +31,21 @@ class GalleryViewController: UIViewController {
         imageSlideshow.setImageInputs(GalleryImages.images as! [InputSource])
         
         imageSlideshow.currentPageChanged = { page in
+            self.enabledBtnsToolbar(page: page)
             self.currentPage = page
+        }
+    }
+    
+    private func enabledBtnsToolbar(page: Int) {
+        self.btnRight.isEnabled = true
+        self.btnLeft.isEnabled = true
+        
+        if page == 0 {
+            self.btnLeft.isEnabled = false
+        } else if self.currentPage <= page {
+            if page >= self.imageSlideshow.images.count - 1 {
+                self.btnRight.isEnabled = false
+            }
         }
     }
     
